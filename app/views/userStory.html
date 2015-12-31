@@ -1,0 +1,16 @@
+<h1>User story</h1>
+<div>
+  Modifier l'user story
+  <form name="form" ng-submit="updateUserStory(userStory)" novalidate>
+    <span>Libéllé : </span><input ng-model="userStory.name" required/>
+    <span>Temps estimé (en jour): </span><input type="number" ng-model="userStory.timeEstimatedDay" required/>
+    <input type="submit" ng-disabled="form.$invalid"/>
+  </form>
+</div>
+<div>
+  Liste des taches
+  <ul>
+    <li ng-repeat="task in userStory.tasks"><a ng-href="/#/task/{{userStory.id}}/{{task.id}}">{{task.name}}</a></li>
+  </ul>
+  <a ng-href="/#/addTask/{{userStory.id}}">Créer une tache</a>
+</div>

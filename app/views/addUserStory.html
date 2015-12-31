@@ -1,0 +1,8 @@
+<div>
+  Créer une user story
+  <form name="form" ng-submit="createUserStory(userStory)" novalidate>
+    <span>Libéllé : </span><input ng-model="userStory.name" required/>
+    <span>Temps estimé (en jour): </span><input type="number" ng-model="userStory.timeEstimatedDay" required/>
+    <input type="submit" ng-disabled="form.$invalid"/>
+  </form>
+</div>

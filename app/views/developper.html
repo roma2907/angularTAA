@@ -1,0 +1,18 @@
+<h1>Développeurs</h1>
+<div>
+  Listes des développeurs
+  <table>
+    <tr>
+      <th>Prenom</th>
+      <th>Nom</th>
+    </tr>
+    <tr ng-repeat="dev in developpers">
+      <td>{{dev.firstName}}</td>
+      <td>{{dev.lastName}}</td>
+    </tr>
+  </table>
+</div>
+<div>
+  <a href="/#/addDevelopper">Ajouter un développeur</a>
+
+</div>

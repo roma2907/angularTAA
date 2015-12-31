@@ -1,0 +1,31 @@
+<h1>Projet</h1>
+<div>
+  <form name="form" ng-submit="updateProjet(projet)" novalidate>
+    <input type="text"  ng-model="projet.name" required/>
+    <p class="error">{{errorProjetName}}</p>
+
+    Affecter des développeurs sur le projet
+    <div>
+      <table>
+        <th>Développeur disponible</th>
+        <th>Développeur dans le projet</th>
+        <tr>
+          <td> <select multiple ng-model="availableDev" ng-options="makeDevelopper(dev) for dev in developpersNotInProjet"/></td>
+          <td><select multiple ng-model="inProjectDev" ng-options="makeDevelopper(dev) for dev in projet.developpers"/></td>
+        </tr>
+      </table>
+
+      <input type="button" value="Changer" ng-click="changeDevelopper()"/>
+    </div>
+    <div>
+      Liste des sprints
+      <ul>
+        <li ng-repeat="sprint in projet.sprints"><a ng-href="#/sprint/{{sprint.id}}">{{sprint.name}}</a></li>
+      </ul>
+      <div ng-if="projet.sprints.length == 0">Aucun sprint</div>
+      <a href="/#/addSprint/{{projet.id}}">Ajouter un sprint</a>
+    </div>
+
+    <button type="submit" ng-disabled="form.$invalid">Modifier</button>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+angular.module('agileApp')
+  .controller('ProjectsCtrl', function ($scope, $http) {
+	refreshProjet($http,$scope);
+ 
+
+  $scope.createProjet = function(valid){
+	if(valid){
+	    var projet = {
+	      "name" : $scope.name
+	    };
+	    $http.post("http://localhost:8080/rest/projet/add", projet)
+	    .success(function(data, status, headers, config) {
+		refreshProjet($http,$scope);
+	      });
+	}
+  };
+
+  
+function refreshProjet($http,$scope){
+	$http.get("http://localhost:8080/rest/projet").success(function(response) {
+        $scope.projets = response;
+      });
+}
+});
+
+
+angular.module('agileApp')
+  .controller('ProjectCtrl', function ($scope, $http,$routeParams) {
+	console.log($routeParams.id);
+});

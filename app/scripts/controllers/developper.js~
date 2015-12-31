@@ -1,0 +1,4 @@
+angular.module('agileApp')
+  .controller('DeveloppeurCtrl', function ($scope, $http) {
+	
+});

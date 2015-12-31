@@ -1,0 +1,15 @@
+<h1>Projets</h1>
+<div ng-controller="ProjectCtrl">
+Liste des projets :
+ <ul>
+    <li ng-repeat="projet in projets"><a ng-href="#/project/{{projet.id}}">{{projet.name}}</a></li>
+ </ul>
+  <div>
+    Créer un nouveau projet (nom du projet):
+	<form name="form" ng-submit="createProjet(project)" novalidate>
+    <div>Nom : <input type="text"  ng-model="project.name" required/></div>
+    <button type="submit" ng-disabled="form.$invalid">Ajout</button>
+    <p class="error">{{errorProjet}}</p>
+	</form>
+  </div>
+</div>

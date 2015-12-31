@@ -1,0 +1,10 @@
+<div>
+  Ajouter un sprint
+  <form name="form" ng-submit="createSprint(sprint)" novalidate>
+    <div>Donnez un nom au sprint : </div><input ng-model="sprint.name" required/>
+    <div>Date de début : </div><input type="date"  name="input" ng-model="sprint.dateBegin" min="01/01/1900" max="31/12/9999" required />
+    <div>Date de fin : </div><input type="date"  name="input" ng-model="sprint.dateEnd" min="01/01/1900" max="31/12/9999" required />
+    <input type="submit" ng-disabled="form.$invalid"/>
+    <p class="error">{{errorSprint}}</p>
+  </form>
+</div>

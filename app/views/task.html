@@ -1,0 +1,11 @@
+<h1>Task</h1>
+<div>
+  Modifier la tache
+  <form name="form" ng-submit="updateTask(task)" novalidate>
+    <span>Nom de la tache : </span><input ng-model="task.name" required/>
+    <span> Développeur : </span><select ng-model="task.developper" ng-options="makeDevelopper(dev) for dev in developpeurs"/>
+    <input type="submit" ng-disabled="form.$invalid"/>
+  </form>
+  <button ng-click="removeTask(task)">Supprimer cette tache</button>
+
+</div>

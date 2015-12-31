@@ -1,0 +1,8 @@
+<div>
+  Créer une tache
+  <form name="form" ng-submit="createTask(task)" novalidate>
+    <span>Nom de la tache : </span><input ng-model="task.name" required/>
+    <span> Développeur : </span><select ng-model="task.developper" ng-options="makeDevelopper(dev) for dev in developpeurs"/>
+    <input type="submit" ng-disabled="form.$invalid"/>
+  </form>
+</div>

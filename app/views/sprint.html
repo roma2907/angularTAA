@@ -1,0 +1,38 @@
+<h1>Sprint</h1>
+<div>
+  Modifier le sprint
+  <form name="form" ng-submit="updateSprint(sprint)" novalidate>
+    <div>Donnez un nom au sprint : </div><input ng-model="sprint.name" required/>
+    <div>Date de début : </div><input type="date"  name="input" ng-model="sprint.dateBegin" min="01/01/0000" max="31/12/9999" required />
+    <div>Date de fin : </div><input type="date"  name="input" ng-model="sprint.dateEnd" min="01/01/0000" max="31/12/9999" required />
+    <input type="submit" ng-disabled="form.$invalid"/>
+    <p class="error">{{errorSprint}}</p>
+  </form>
+
+</div>
+<div>
+  <div ng-if="userStories.length > 0">
+    <h3>Liste des user stories</h3>
+    <table>
+      <th>Libellé</th>
+      <th>Temps estimé</th>
+      <tr ng-repeat="userStory in userStories">
+        <td> <a ng-href="/#/userStory/{{userStory.id}}">{{userStory.name}}</a></td>
+        <td> {{userStory.timeEstimatedDay}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div ng-if="epics.length > 0">
+    <h3>Liste des epics</h3>
+    <table>
+      <th>Libellé</th>
+      <th>Temps estimé</th>
+      <tr ng-repeat="userStory in epics">
+        <td><a ng-href="/#/userStory/{{userStory.id}}"> {{userStory.name}}</a></td>
+        <td> {{userStory.timeEstimatedDay}}</td>
+      </tr>
+    </table>
+  </div>
+  <a ng-href="/#/addUserStory/{{sprint.id}}">Créer une user story</a>
+</div>

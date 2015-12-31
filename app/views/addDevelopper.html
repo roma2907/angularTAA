@@ -1,0 +1,8 @@
+<div>
+  Ajouter un développeur
+  <form name="form" ng-submit="createDevelopper(dev)" novalidate>
+    <span>Prénom : </span><input ng-model="dev.firstName" required/>
+    <span>Nom : </span><input ng-model="dev.lastName" required/>
+    <input type="submit" ng-disabled="form.$invalid"/>
+  </form>
+</div>
