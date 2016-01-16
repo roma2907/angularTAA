@@ -8,6 +8,7 @@ Lancer le serveur grunt avec la commande
 
 ```
 grunt serve
+```
 
 ##Description du projet
 
