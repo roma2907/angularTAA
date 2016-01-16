@@ -12,4 +12,4 @@ grunt serve
 
 ##Description du projet
 
-Cette application permet de gérer ses projets, ainsi que lle déroulement des projets. On peut donc gérer les sprints, les user stories , les taches ainsi que les développeurs.
+Cette application permet de gérer ses projets, ainsi que le déroulement des projets. On peut donc gérer les sprints, les user stories , les taches ainsi que les développeurs.
