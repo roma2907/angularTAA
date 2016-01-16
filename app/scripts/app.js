@@ -75,11 +75,3 @@ angular
       });
   });
 
-angular.module('agileApp').config(function($httpProvider) {
-  /**
-   * make delete type json
-   */
-  $httpProvider.defaults.headers["delete"] = {
-    'Content-Type': 'application/json;charset=utf-8'
-  };
-})

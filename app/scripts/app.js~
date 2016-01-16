@@ -16,8 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]).config(function ($routeProvider) {
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -40,8 +40,38 @@ angular
       }).when('/project/:id', {
 	  templateUrl: 'views/project.html',
               controller: 'ProjectCtrl',
-              controllerAs: 'project'	
-	}).otherwise({
+              controllerAs: 'project'
+      }).when('/addSprint/:idProjet', {
+          templateUrl: 'views/addSprint.html',
+          controller: 'AddSprintCtrl',
+          controllerAs: 'addSprint'
+      }).when('/sprint/:id', {
+              templateUrl: 'views/sprint.html',
+              controller: 'SprintCtrl',
+              controllerAs: 'Sprint'
+	}).when('/addDevelopper', {
+    	  templateUrl: 'views/addDevelopper.html',
+                  controller: 'AddDevelopperCtrl',
+                  controllerAs: 'addDev'
+    }).when('/addUserStory/:idSprint', {
+            templateUrl: 'views/addUserStory.html',
+                      controller: 'AddUserStoryCtrl',
+                      controllerAs: 'addUserStory'
+    }).when('/addTask/:idUserStory', {
+                templateUrl: 'views/addTask.html',
+                          controller: 'AddTaskCtrl',
+                          controllerAs: 'addTask'
+    }).when('/task/:idUserStory/:idTask', {
+                     templateUrl: 'views/task.html',
+                               controller: 'TaskCtrl',
+                               controllerAs: 'Task'
+
+    }).when('/userStory/:idSprint', {
+             templateUrl: 'views/userStory.html',
+                       controller: 'UserStoryCtrl',
+                       controllerAs: 'userStory'
+    	}).otherwise({
         redirectTo: '/'
       });
   });
+
