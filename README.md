@@ -7,5 +7,5 @@ version 0.14.0.
 
 Lancer le serveur grunt avec la commande 
 
-'''
+```
 grunt serve
