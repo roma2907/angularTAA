@@ -11,6 +11,8 @@ Placez vous dans le dossier, et lancer le serveur grunt avec la commande
 grunt serve
 ```
 
+Pour pouvoir accéder aux données de l'application il faut que le serveur REST soit lancéhttps://github.com/roma2907/TAA-agileProject
+
 ##Description du projet
 
 Cette application permet de gérer ses projets, ainsi que le déroulement des projets. On peut donc gérer les sprints, les user stories , les taches ainsi que les développeurs.
