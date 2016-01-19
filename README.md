@@ -4,7 +4,8 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.14.0.
 
 ## Installation
-Lancer le serveur grunt avec la commande 
+Récupérer le projet
+Placez vous dans le dossier, et lancer le serveur grunt avec la commande 
 
 ```
 grunt serve
