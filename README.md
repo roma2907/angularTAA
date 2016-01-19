@@ -4,13 +4,13 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.14.0.
 
 ## Installation
-*Récupérer le projet
-*Placez vous dans le dossier, et lancer l'installation des dépendances en tapant (requis d'avoir npm et git d'installer) :
+* Récupérer le projet
+* Placez vous dans le dossier, et lancer l'installation des dépendances en tapant (requis d'avoir npm et git d'installer) :
 ```
 ./install.sh
 ```
 
-*Lancez le serveur grunt avec la commande 
+* Lancez le serveur grunt avec la commande 
 
 ```
 grunt serve
